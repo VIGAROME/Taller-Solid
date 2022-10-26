@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Principal;
+import java.util.ArrayList;
+
 import Adicionales.Aderezo;
 import Postres.*;
 import Procesos.*;
@@ -18,7 +20,8 @@ public class Sistema {
         // a ambos agregarles CREMA y FRUTILLAS
         // y cambiar el tipo de leche por Leche Deslactosada
         ArrayList<Postre> arrPostres = new ArrayList<>();
-        ManejadorDeLeche mnj_leche = new ManejadorDeLeche(new LecheDescremada());
+        ManejadorDeLeche mnj_leche = new ManejadorDeLeche();
+        LecheDeslactosada leche= new LecheDeslactosada();
         
         // Producir Helado
 
@@ -26,7 +29,7 @@ public class Sistema {
         helado_vainilla.añadirAderezo(Aderezo.CREMA);
         helado_vainilla.añadirAderezo(Aderezo.FRUTILLA);
         System.out.println(helado_vainilla);
-//        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
+      mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
         System.out.println(helado_vainilla.showPrecioFinal());
         
         // Producir Pastel
@@ -34,7 +37,7 @@ public class Sistema {
         pastel_chocolate.quitarAderezo(Aderezo.CREMA);
         pastel_chocolate.quitarAderezo(Aderezo.FRUTILLA);
         System.out.println(pastel_chocolate);
-//        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
+       mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
         System.out.println(helado_vainilla.showPrecioFinal());
 
         
@@ -42,7 +45,7 @@ public class Sistema {
             postre.addAderezos(new Crema());
             postre.addAderezos(new Frutilla());
             System.out.println(postre);
-            mnj_leche.cambiarTipoLeche(postre);
+            mnj_leche.cambiarTipoLeche(leche,postre);
             System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
         });        
         

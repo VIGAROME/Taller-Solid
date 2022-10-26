@@ -5,6 +5,7 @@
 package Procesos;
 
 import Postres.Helado;
+import Postres.Postre;
 
 /**
  *
@@ -13,11 +14,11 @@ import Postres.Helado;
 public class ManejadorDePrecio {
     public double calcularPrecioFinal(Postre p){
         double precioFinal;
-        precioFinal=(get.precioParcial*1.12)+(aderezos.size()*0.50);
+        precioFinal=(p.getPrecioParcial()*1.12)+(p.getAderezos().size()*0.50);
         return precioFinal;
     }
     public String showPrecioFinal(){
-        return "Precio Final: $ " + calcularPrecioFinal();
+        return "Precio Final: $ " + getcalcularPrecioFinal(p);
     }
     
 }
