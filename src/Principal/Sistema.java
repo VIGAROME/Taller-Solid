@@ -21,11 +21,22 @@ public class Sistema {
         ManejadorDeLeche mnj_leche = new ManejadorDeLeche(new LecheDescremada());
         
         // Producir Helado
-        Postre helado_vainilla = new Helado("Vainilla");
-        arrPostres.add(helado_vainilla);
+
+        Helado helado_vainilla = new Helado("Vainilla");
+        helado_vainilla.añadirAderezo(Aderezo.CREMA);
+        helado_vainilla.añadirAderezo(Aderezo.FRUTILLA);
+        System.out.println(helado_vainilla);
+//        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
+        System.out.println(helado_vainilla.showPrecioFinal());
+        
         // Producir Pastel
-        Postre pastel_chocolate = new Pastel("Chocolate");
-        arrPostres.add(pastel_chocolate);
+        Pastel pastel_chocolate = new Pastel("Chocolate");
+        pastel_chocolate.quitarAderezo(Aderezo.CREMA);
+        pastel_chocolate.quitarAderezo(Aderezo.FRUTILLA);
+        System.out.println(pastel_chocolate);
+//        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
+        System.out.println(helado_vainilla.showPrecioFinal());
+
         
         arrPostres.forEach(postre -> {
             postre.addAderezos(new Crema());
