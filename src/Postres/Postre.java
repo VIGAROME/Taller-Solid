@@ -4,8 +4,9 @@
  */
 package Postres;
 
-import Adicionales.Aderezo;
+
 import java.util.ArrayList;
+import Adicionales.*;
 
 /**
  *
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 public class Postre {
     private String sabor;
     private double precioParcial;
-    private ArrayList<Aderezo> aderezos;
+    private final ArrayList<Aderezo> aderezos;
 
     public Postre(String sabor, double precioParcial, ArrayList<Aderezo> aderezos) {
         this.sabor = sabor;
@@ -45,8 +46,8 @@ public class Postre {
     }
     
     //Método para añadir aderezo
-    public void añadirAderezo(Aderezo aderezo){
-       this.getAderezos().add(aderezo);
+    public void addAderezos(Aderezo aderezo){
+       this.aderezos.add(aderezo);
     }
     
     
