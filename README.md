@@ -6,4 +6,4 @@ Literal 2: En el punto #2 menciona que hay dos métodos en una clase llamada Ope
 
 Literal 3: Está rompiendo el primer principio Simple responsibility ya que esta utilizando el mismo método reiteradas ocasiones en vez de hacerlo general para todos sus productos además se simplifico el código realizando una multiplicación por 1.12. 
 
-Literal 4: el proceso de enum es necesario debido a q no permite que el programa crezca
+Literal 4: el proceso de enum es necesario debido a que no permite que el programa crezca
