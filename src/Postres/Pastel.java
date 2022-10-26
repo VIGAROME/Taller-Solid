@@ -6,7 +6,6 @@
 package Postres;
 
 import java.util.ArrayList;
-import Adicionales.Aderezo;
 
 /**
  *
@@ -14,11 +13,12 @@ import Adicionales.Aderezo;
  */
 public class Pastel extends Postre{
     
-
-    public Pastel(String sabor, double precioParcial, ArrayList<Aderezo> aderezos) {
-        super(sabor, 15.55, new ArrayList<>());
-        
+    
+    public Pastel(String sabor){
+        super(sabor, 15.55,new ArrayList<>());
     }
+    
+    
     
     @Override
     public String toString() {
